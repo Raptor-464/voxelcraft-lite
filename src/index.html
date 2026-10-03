@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>VoxelCraft - Full World</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="gameContainer"></div>
+    <div class="hud">
+        <div class="top-left">
+            <div class="game-title">VoxelCraft</div>
+            <div class="game-mode">Mode: Creative</div>
+            <div class="coords">Coordinates: <span id="coordsDisplay">0, 0, 0</span></div>
+        </div>
+        
+        <div class="top-right">
+            <div class="day-night">
+                <div class="sun-moon" id="sunMoon">☀️</div>
+                <div class="time-display" id="timeDisplay">Day 1, 6:00</div>
+            </div>
+        </div>
+
+        <div class="bottom-left">
+            <div class="hotbar">
+                <div class="hotbar-title">Hotbar</div>
+                <div class="hotbar-slots" id="hotbarSlots"></div>
+            </div>
+        </div>
+
+        <div class="bottom-right">
+            <div class="quick-stats">
+                <div>Health: <span id="healthDisplay">20/20</span> ❤️</div>
+                <div>Hunger: <span id="hungerDisplay">20/20</span> 🍗</div>
+            </div>
+            <button id="toggleMenu" class="menu-btn">Menu (ESC)</button>
+        </div>
+    </div>
+
+    <div id="craftingMenu" class="menu hidden">
+        <div class="menu-content">
+            <h2>Crafting Menu</h2>
+            <div class="recipe-grid" id="recipeGrid"></div>
+            <button id="closeMenu" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="inventoryMenu" class="menu hidden">
+        <div class="menu-content">
+            <h2>Inventory</h2>
+            <div class="inventory-grid" id="inventoryGrid"></div>
+            <button id="closeInventory" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="multiplayerMenu" class="menu hidden">
+        <div class="menu-content">
+            <h2>Multiplayer</h2>
+            <div class="mp-controls">
+                <input type="text" id="playerName" placeholder="Enter your name" maxlength="16">
+                <input type="text" id="serverCode" placeholder="Server code or IP">
+                <button id="joinServer">Join Server</button>
+                <button id="hostServer">Host Server</button>
+                <div id="playersList" class="players-list"></div>
+            </div>
+            <button id="closeMultiplayer" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="touchControls" class="touch-controls">
+        <div class="joystick" id="leftJoystick"></div>
+        <div class="button-group">
+            <button id="jumpBtn" class="touch-btn">Jump</button>
+            <button id="placeBtn" class="touch-btn place">Place</button>
+            <button id="breakBtn" class="touch-btn break">Break</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@r128/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@9.0.0/dist/umd/uuidv4.min.js"></script>
+    <script src="./game-engine.js"></script>
+    <script src="./multiplayer.js"></script>
+    <script src="./ui-controller.js"></script>
+    <script src="./input-handler.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

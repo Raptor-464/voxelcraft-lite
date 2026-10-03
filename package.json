@@ -1,46 +1,35 @@
 {
-  "name": "voxelcraft-lite",
+  "name": "voxelcraft-mobile",
   "version": "1.0.0",
-  "description": "A Minecraft-inspired desktop sandbox game prototype with crafting and procedural generation.",
+  "description": "Full-featured Minecraft-inspired voxel sandbox game for mobile and desktop",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dev": "electron . --dev",
+    "build:desktop": "electron-builder",
+    "build:mobile": "cordova build",
+    "serve": "http-server . -p 8000"
   },
-  "keywords": [
-    "minecraft",
-    "voxel",
-    "game",
-    "desktop",
-    "electron"
-  ],
+  "keywords": ["minecraft", "voxel", "game", "mobile", "desktop"],
   "author": "Raptor-464",
   "license": "MIT",
   "devDependencies": {
     "electron": "^31.0.2",
-    "electron-builder": "^24.13.4"
+    "electron-builder": "^24.13.4",
+    "three": "^r128",
+    "cordova": "^12.0.0"
+  },
+  "dependencies": {
+    "three": "^r128",
+    "uuid": "^9.0.0"
   },
   "build": {
-    "appId": "com.raptor464.voxelcraftlite",
-    "productName": "VoxelCraft Lite",
-    "directories": {
-      "output": "dist"
-    },
-    "files": [
-      "**/*",
-      "!**/.git/**",
-      "!**/dist/**",
-      "!**/node_modules/**"
-    ],
-    "win": {
-      "target": "nsis"
-    },
-    "linux": {
-      "target": "AppImage"
-    },
-    "mac": {
-      "target": "dmg"
-    }
+    "appId": "com.raptor464.voxelcraft",
+    "productName": "VoxelCraft",
+    "directories": {"output": "dist"},
+    "files": ["**/*", "!**/.git/**", "!**/dist/**", "!**/node_modules/**"],
+    "win": {"target": "nsis"},
+    "linux": {"target": "AppImage"},
+    "mac": {"target": "dmg"}
   }
 }
