@@ -1,0 +1,33 @@
+# VoxelCraft Web
+
+A browser-based, multiplayer voxel sandbox inspired by Bloxd.io and Minecraft.
+
+## Features
+- Browser-based play from PC or mobile
+- Multiplayer world sync using Socket.IO
+- Block placement and removal
+- Inventory + hotbar
+- Crafting recipes
+- Day/night world mood
+- Simple voxel terrain generation
+
+## Run locally
+
+```bash
+npm install
+npm start
+```
+
+Then open:
+- http://localhost:3000
+
+## Controls
+- WASD: move
+- Mouse click: place block
+- Right click: remove block
+- Number keys 1-6: hotbar selection
+- T: open chat
+- G: craft helper button
+
+## Notes
+This is an original browser prototype for a web game, not a copy of Minecraft's assets or code.

@@ -1,35 +1,18 @@
 {
-  "name": "voxelcraft-mobile",
+  "name": "voxelcraft-web",
   "version": "1.0.0",
-  "description": "Full-featured Minecraft-inspired voxel sandbox game for mobile and desktop",
-  "main": "main.js",
+  "description": "Browser-based multiplayer voxel sandbox inspired by Bloxd.io and Minecraft",
+  "main": "server.js",
   "scripts": {
-    "start": "electron .",
-    "dev": "electron . --dev",
-    "build:desktop": "electron-builder",
-    "build:mobile": "cordova build",
-    "serve": "http-server . -p 8000"
-  },
-  "keywords": ["minecraft", "voxel", "game", "mobile", "desktop"],
-  "author": "Raptor-464",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^31.0.2",
-    "electron-builder": "^24.13.4",
-    "three": "^r128",
-    "cordova": "^12.0.0"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
-    "three": "^r128",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
     "uuid": "^9.0.0"
   },
-  "build": {
-    "appId": "com.raptor464.voxelcraft",
-    "productName": "VoxelCraft",
-    "directories": {"output": "dist"},
-    "files": ["**/*", "!**/.git/**", "!**/dist/**", "!**/node_modules/**"],
-    "win": {"target": "nsis"},
-    "linux": {"target": "AppImage"},
-    "mac": {"target": "dmg"}
+  "devDependencies": {
+    "nodemon": "^3.1.16"
   }
 }
