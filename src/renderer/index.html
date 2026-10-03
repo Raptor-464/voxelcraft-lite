@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoxelCraft Lite</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div class="title">VoxelCraft Lite</div>
+      <div class="info-panel">
+        <div><strong>Selection:</strong> <span id="selectedBlock">Grass</span></div>
+        <div><strong>Build:</strong> Left Click</div>
+        <div><strong>Remove:</strong> Right Click</div>
+        <div><strong>Craft:</strong> G</div>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas" width="1280" height="720"></canvas>
+
+    <div class="inventory-panel">
+      <h3>Inventory</h3>
+      <div id="inventory"></div>
+    </div>
+
+    <div class="crafting-panel">
+      <h3>Crafting</h3>
+      <div class="recipe-row">
+        <button class="recipe" data-recipe="planks">Craft Planks</button>
+        <button class="recipe" data-recipe="bricks">Craft Bricks</button>
+      </div>
+      <div class="recipe-row">
+        <button class="recipe" data-recipe="stoneBrick">Stone Bricks</button>
+        <button class="recipe" data-recipe="glass">Craft Glass</button>
+      </div>
+    </div>
+
+    <script src="./game.js"></script>
+  </body>
+</html>

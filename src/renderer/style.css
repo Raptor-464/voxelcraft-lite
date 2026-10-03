@@ -1,0 +1,55 @@
+# VoxelCraft Lite
+
+VoxelCraft Lite is a desktop game prototype inspired by Minecraft. It is built as a desktop application using Electron, so it can be installed and launched like a normal app instead of running only in a browser.
+
+## Features
+
+- Procedural terrain generation
+- Block placement and removal
+- Inventory system
+- Crafting recipes
+- Multiple block types
+- Desktop installable app build
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run the app:
+   ```bash
+   npm start
+   ```
+
+3. Build an installable desktop package:
+   ```bash
+   npm run dist
+   ```
+
+## Controls
+
+- WASD: Pan the camera
+- 1-6: Select build block
+- Left click: Place block
+- Right click: Remove block
+- G: Craft planks
+- C: Craft bricks
+- V: Craft glass
+
+## Notes
+
+This project is an original prototype and a good starting point for a larger sandbox game. For the final polished version, you can expand it with:
+
+- true 3D voxel rendering
+- multiplayer networking
+- chunk loading
+- hand/tool systems
+- richer textures and sound
+- save/load world files
+
+## License
+
+MIT
+
